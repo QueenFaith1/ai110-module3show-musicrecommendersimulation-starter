@@ -76,6 +76,23 @@ Final Algorithm Recipe
 Genre match = +2.0 points
 Mood match = +1.0 point
 Energy similarity = 1 - |user_energy - song_energy| (max 1.0 points)
+
+Input → Process → Output
+
+User wants: happy, afrobeats, energy 0.65
+     ↓
+Loop through all 15 songs in CSV
+     ↓
+Score each song:
+  - Genre match? +2.0
+  - Mood match? +1.0  
+  - Energy close? up to +1.0
+     ↓
+Sort all songs highest to lowest score
+     ↓
+Return top 3 recommendations
+
+This system might be biased because my catalog doesn't have enough afrobeats, r&b, hip-hop and soul songs to match my favorite genres. This means genre matching becomes less useful and recommendations end up relying mostly on mood and energy instead
 ---
 
 ## Getting Started
