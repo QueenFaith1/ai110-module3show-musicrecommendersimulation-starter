@@ -134,14 +134,34 @@ You can add more tests in `tests/test_recommender.py`.
 
 Paste a sample of your recommender's output here as a text block so a reader can see what it produces:
 
-```
-# e.g.:
-# User profile: genre=indie, mood=chill, energy=low
-# Recommendations:
-#   1. ...
-#   2. ...
-#   3. ...
-```
+🎵 Top Music Recommendations
+
+========================================
+
+#1 Sunrise City by Neon Echo
+   Score: 3.98 / 4.00
+   Why: genre match (+2.0), mood match (+1.0), energy similarity (+0.98)
+----------------------------------------
+
+#2 Gym Hero by Max Pulse
+   Score: 2.87 / 4.00
+   Why: genre match (+2.0), energy similarity (+0.87)
+----------------------------------------
+
+#3 Electric Love by BØRNS
+   Score: 1.98 / 4.00
+   Why: mood match (+1.0), energy similarity (+0.98)
+----------------------------------------
+
+#4 Rooftop Lights by Indigo Parade
+   Score: 1.96 / 4.00
+   Why: mood match (+1.0), energy similarity (+0.96)
+----------------------------------------
+
+#5 Put Your Records On by Corinne Bailey Rae
+   Score: 1.75 / 4.00
+   Why: mood match (+1.0), energy similarity (+0.75)
+----------------------------------------
 
 **Screenshot or video** *(optional)*: <!-- Insert a screenshot or demo video link here -->
 
