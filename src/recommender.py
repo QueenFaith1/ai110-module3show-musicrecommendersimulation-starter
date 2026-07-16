@@ -53,11 +53,36 @@ def load_songs(csv_path: str) -> List[Dict]:
     return songs
 
 def score_song(user_prefs: Dict, song: Dict) -> Tuple[float, List[str]]:
-    """Scores a single song against user preferences."""
-    # TODO: Implement scoring logic
-    return 0.0, []
+    """Scores a single song against user preferences using weighted algorithm."""
+    score = 0.0
+    reasons = []
+
+    # Genre match = +2.0 points
+    if song['genre'].lower() == user_prefs.get('genre', '').lower():
+        score += 2.0
+        reasons.append("genre match (+2.0)")
+
+    # Mood match = +1.0 point
+    if song['mood'].lower() == user_prefs.get('mood', '').lower():
+        score += 1.0
+        reasons.append("mood match (+1.0)")
+
+    # Energy similarity = up to 1.0 points
+    energy_score = 1 - abs(user_prefs.get('energy', 0.5) - song['energy'])
+    score += energy_score
+    reasons.append(f"energy similarity (+{energy_score:.2f})")
+
+    return score, reasons
 
 def recommend_songs(user_prefs: Dict, songs: List[Dict], k: int = 5) -> List[Tuple[Dict, float, str]]:
-    """Functional implementation of the recommendation logic."""
-    # TODO: Implement scoring and ranking logic
-    return []
+    """Ranks all songs by score and returns top k recommendations."""
+    scored_songs = []
+    
+    for song in songs:
+        score, reasons = score_song(user_prefs, song)
+        explanation = ", ".join(reasons)
+        scored_songs.append((song, score, explanation))
+    
+    sorted_songs = sorted(scored_songs, key=lambda x: x[1], reverse=True)
+    
+    return sorted_songs[:k]
