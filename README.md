@@ -257,4 +257,8 @@ Building this recommender taught me that recommendation systems are not magic th
 
 This changed the way I think about apps like Spotify. The reason they work so well is not just clever algorithms but massive diverse datasets built over years. Bias can show up simply because certain genres or moods are underrepresented in the training data exactly what happened in my catalog.
 
+## Visual Output
 
+Recommendations are displayed using the `tabulate` library with grid 
+formatting showing rank, title, artist, score and reasons in a 
+structured table for improved readability and transparency.
