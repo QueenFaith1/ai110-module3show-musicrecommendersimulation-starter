@@ -120,10 +120,12 @@ python -m src.main
 
 ### Running Tests
 
-Run the starter tests with:
-
-```bash
-pytest
+python -m pytest tests/test_recommender.py -v
+Sample test output:
+collected 2 items
+tests/test_recommender.py::test_recommend_returns_songs_sorted_by_score PASSED [ 50%]
+tests/test_recommender.py::test_explain_recommendation_returns_non_empty_string PASSED [100%]
+2 passed in 0.08s
 ```
 
 You can add more tests in `tests/test_recommender.py`.
@@ -239,6 +241,10 @@ Write 1 to 2 paragraphs here about what you learned:
 
 - about how recommenders turn data into predictions
 - about where bias or unfairness could show up in systems like this
+## Reflection
 
+Building this recommender taught me that recommendation systems are not magic — they are just math applied to data. The biggest surprise was how much the quality of the dataset matters. My system struggled to recommend afrobeats songs not because the algorithm was wrong but because the data was not there.
+
+This changed the way I think about apps like Spotify. The reason they work so well is not just clever algorithms but massive diverse datasets built over years. Bias can show up simply because certain genres or moods are underrepresented in the training data — exactly what happened in my catalog.
 
 
