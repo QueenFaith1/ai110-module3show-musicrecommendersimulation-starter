@@ -218,7 +218,9 @@ same songs ranked in the same order but all scores dropped
 by 1.0 point. This shows genre weight significantly 
 influences scores but the ranking order stayed stable 
 because mood and energy compensate when genre is weaker.
-  
+
+Comparing profiles: The CS Student got calm low energy jazz while the Older Person got upbeat indie pop — completely opposite results showing the system correctly differentiates between different listener types
+
 ## Limitations and Risks
 
 Summarize some limitations of your recommender.
