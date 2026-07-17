@@ -33,6 +33,18 @@ The catalog only has 15 songs which severely limits variety. Genre matching is l
 ## 7. Evaluation
 I tested three user profiles: a CS Student studying Quant Engineering who wanted jazz and focused low energy music, a Social Work Student who wanted lofi chill mid energy music, and an Older Person exploring new music who wanted happy high energy indie pop. The CS Student correctly got Coffee Shop Stories as the top result. The Social Work Student got Midnight Coding and Library Rain which both made sense. The Older Person got Electric Love and Rooftop Lights which felt right. The results matched my intuition for all three profiles.
 
+The CS Student profile recommended jazz and focused low energy songs 
+which made sense for someone studying. The Social Work Student got 
+lofi chill songs which matched the calm focused mood needed for 
+building a persona. The Older Person got upbeat indie pop which felt 
+right for someone exploring new music. 
+
+Comparing CS Student vs Older Person — the CS Student got low energy 
+calm songs while the Older Person got high energy happy songs. This 
+makes sense because energy and mood preferences were completely 
+opposite between the two profiles showing the system correctly 
+differentiates between very different listener types.
+
 ---
 
 ## 8. Future Work
