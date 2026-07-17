@@ -211,6 +211,14 @@ genre=indie pop, mood=happy, energy=0.8
 #3 Sunrise City by Neon Echo
    Score: 1.98 / 4.00
    Why: mood match (+1.0), energy similarity (+0.98)
+
+ ### Weight Experiment
+When I reduced genre match from +2.0 to +1.0 points the 
+same songs ranked in the same order but all scores dropped 
+by 1.0 point. This shows genre weight significantly 
+influences scores but the ranking order stayed stable 
+because mood and energy compensate when genre is weaker.
+  
 ## Limitations and Risks
 
 Summarize some limitations of your recommender.
@@ -243,8 +251,8 @@ Write 1 to 2 paragraphs here about what you learned:
 - about where bias or unfairness could show up in systems like this
 ## Reflection
 
-Building this recommender taught me that recommendation systems are not magic — they are just math applied to data. The biggest surprise was how much the quality of the dataset matters. My system struggled to recommend afrobeats songs not because the algorithm was wrong but because the data was not there.
+Building this recommender taught me that recommendation systems are not magic they are just math applied to data. The biggest surprise was how much the quality of the dataset matters. My system struggled to recommend afrobeats songs not because the algorithm was wrong but because the data was not there.
 
-This changed the way I think about apps like Spotify. The reason they work so well is not just clever algorithms but massive diverse datasets built over years. Bias can show up simply because certain genres or moods are underrepresented in the training data — exactly what happened in my catalog.
+This changed the way I think about apps like Spotify. The reason they work so well is not just clever algorithms but massive diverse datasets built over years. Bias can show up simply because certain genres or moods are underrepresented in the training data exactly what happened in my catalog.
 
 
